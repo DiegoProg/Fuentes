@@ -17,6 +17,9 @@ public class principal {
 			
 			System.out.print("Ingrese el nombre: ");
 			scan.nextLine();
+
+			System.out.print("Ingrese el nombre: ");
+			scan.nextLine();
 			String nombre_producto=scan.nextLine();
 			System.out.print("Ingrese el Codigo: ");
 			int codigo=scan.nextInt();
