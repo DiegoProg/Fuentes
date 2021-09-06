@@ -24,7 +24,7 @@ steps:
 - task: Maven@3
   displayName: 'mavenPomfile: app/pom.xml'
   inputs:
-    mavenPomFile: 'app/pom.xml'
+    mavenPomFile: 'pom.xml'
     codeCoverageToolOption: Cobertura
 
 - task: CopyFiles@2
