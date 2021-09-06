@@ -36,3 +36,4 @@ steps:
     publishLocation: 'Container'
   condition: 
     
+- task: PublishBuildArtifacts@1
