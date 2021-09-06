@@ -10,17 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/*.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    CleanTargetFolder: true
-    preserveTimestamp: true
 
-
-
+  
 - task: Maven@3
   displayName: 'mavenPomfile: app/pom.xml'
   inputs:
@@ -36,12 +27,6 @@ steps:
     CleanTargetFolder: true
     preserveTimestamp: true
 
-- task: PublishBuildArtifacts@1
-  displayName: 'publish to: drop'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifact: $(drop)'
@@ -51,4 +36,3 @@ steps:
     publishLocation: 'Container'
   condition: 
     
-  
